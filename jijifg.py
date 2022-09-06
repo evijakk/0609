@@ -1,5 +1,4 @@
 print("hi")
 print("bye")
 print("nice")
-print(15+5)
 print(25**8)

@@ -7,3 +7,10 @@ print("Today is", datetime.datetime.now())
 current_year = int(datetime.datetime.now (). year)
 year_when_hundred = current_year + hundred_in
 print("Then it will be", year_when_hundred)
+
+round = "hello"
+print(round)
+
+vv = "hi"
+dd = "g"
+print(sum(vv,dd))

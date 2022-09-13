@@ -34,9 +34,7 @@ while stars<bottom_row:
 #  whether a person knows about programming at all smile
 
 for num in range (1,101):
-    if num==100:
-        print(num)
-    elif num%35==0:
+    if num%35==0:
         print("FizzBuzz, ", end="")
     elif num%5==0:
         print("Fizz, ", end="")

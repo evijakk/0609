@@ -42,6 +42,7 @@ for num in range (1,101):
         print("Buzz, ", end="")
     else:
         print(num,", ", end="")
+print("")
 
 # 3. Primes Check if entered positive number is a prime number.
 

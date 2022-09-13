@@ -50,13 +50,16 @@ for num in range (1,101):
 #  A prime number is a number that divides without remainder only by itself and 1.
 
 # Hint: what numbers do we have to check?
-
-# prime_check = int(input("enter positive number"))
-# if prime_check>0:
-#     for dalitajs in range(2,prime_check):
-#         if prime_check%int(dalitajs)!=0:
-#             print(f"{prime_check} nav pirmskaitlis")
-#         else:
-#             print("ir pirmskaitlis")
-# else:
-#     print("It is not positive number, try again")
+itis = True
+prime_check = int(input("enter positive number"))
+if prime_check>0:
+    for dalitajs in range(2,prime_check):
+        remainder=prime_check%int(dalitajs)
+        if int(remainder)==0:
+            itis =False
+    if itis == True:
+        print("It is prime number!")
+    else:
+        print("it is not")
+else:
+    print("It is not positive number, try again")

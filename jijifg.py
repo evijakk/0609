@@ -36,3 +36,6 @@ for v in my_name:
 # ***** 
 
 # Note: remember that several symbols can be printed at once, for example: print ("" * 10 + "*" * 6)
+
+food="saulesberns"
+print(food[2:4])

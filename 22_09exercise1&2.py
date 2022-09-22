@@ -47,11 +47,8 @@ def is_palindrome(text):
     reversesss = (text[::-1])
     text = text.upper()
     reversesss = reversesss.upper()
-    text = text.strip()
-    reversesss = reversesss.strip()
-    if text == reversesss:
-        print(True)
-    else:
-        print(False)
+    text = text.replace(" ","")
+    reversesss = reversesss.replace(" ","")
+    print(text == reversesss)
    
-is_palindrome("aLus aRi ira sUla")
+is_palindrome("aL us aRi ira sU la")

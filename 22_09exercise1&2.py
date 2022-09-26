@@ -23,7 +23,8 @@ def add_mult(a,b,c):
         resultat=((a+b)*c)
     return resultat
     
-add_mult(1,5,6)
+
+print(add_mult)
 
 # 2. Palindrome
 

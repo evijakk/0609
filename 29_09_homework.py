@@ -23,4 +23,4 @@ def good_and_bad_strings (a,b,c):
     sorted(resultats)
     return(resultats)
 
-print(good_and_bad_strings("abcf", "fab", "boo"))
+print(good_and_bad_strings("zkabcf", "zkfab", "boo"))

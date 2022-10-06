@@ -12,7 +12,7 @@ import numpy as np
 x = list(range(-10, 10))
 y = []
 for n in x:
-    y.append((x[n]+5)**3)
+    y.append((n+5)**3)
 
 plt.plot(x,y)
 plt.show()

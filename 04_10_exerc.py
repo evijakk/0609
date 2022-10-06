@@ -45,22 +45,35 @@
 
 # in effect you will be saving in standard csv format - https://docs.python.org/3/library/csv.html
 # you can use csv module for this, but it is not necessary
-from pathlib import Path 
+# from pathlib import Path 
 
-with open('sherlock_holmes_adventures.txt', encoding="utf-8") as f:  # create a file object
-    # filtered_lines = [line for line in f if needle in line]
-# # # # # # # # #     # so only get 3rd and 4th token from each line if they are actual tokens to be gotten
-    # filtered_lines = [line.split()[2:4] for line in f if len(line.split()) > 3]
-    # filtered_lines = [line.rstrip('\n')
-    #                   for line in f if line.startswith("And")]  # possible to use regex from re
-    # filtered_lines = [line for line in f if line[0] in string.digits] # so only lines which start with digits
-# # # # # # # # # #     #     # possible to use regex from re
-# # # # # # # # # #     #     filtered_lines = [line for line in f if line.startswith("And")]
-# # # # # # # # # #     # for more difficult filtering:
-    filtered_lines = []
-    for line in f:
-        if line.startswith("And"):
-            filtered_lines.append(line.rstrip())
-print(filtered_lines)
+# with open('C:\Users\Latefekts\Desktop\github2\0609\sherlock_holmes_adventures.txt', encoding="utf-8") as f:  # create a file object
+#     # filtered_lines = [line for line in f if needle in line]
+# # # # # # # # # #     # so only get 3rd and 4th token from each line if they are actual tokens to be gotten
+#     # filtered_lines = [line.split()[2:4] for line in f if len(line.split()) > 3]
+#     # filtered_lines = [line.rstrip('\n')
+#     #                   for line in f if line.startswith("And")]  # possible to use regex from re
+#     # filtered_lines = [line for line in f if line[0] in string.digits] # so only lines which start with digits
+# # # # # # # # # # #     #     # possible to use regex from re
+# # # # # # # # # # #     #     filtered_lines = [line for line in f if line.startswith("And")]
+# # # # # # # # # # #     # for more difficult filtering:
+#     filtered_lines = []
+#     for line in f:
+#         if line.startswith("And"):
+#             filtered_lines.append(line.rstrip())
 # print(filtered_lines)
-# # # # # print(filtered_lines_num)
+# # print(filtered_lines)
+# # # # # # print(filtered_lines_num)
+from pathlib import Path  
+
+absolute_path = r"C:\Users\Latefekts\Desktop\github2\0609\sherlock_holmes_adventures.txt"
+fstream = open(absolute_path, encoding="utf8")
+text = fstream.read()
+fstream.close() # crucial that we close the file when not using a context manager
+print(text[:1])
+
+def file_line_len(fstream):
+    num_lines = sum(1 for _ in open('sherlock_holmes_adventures.txt'))
+    return num_lines
+
+print(file_line_len)

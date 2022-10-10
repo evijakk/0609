@@ -21,14 +21,19 @@
 
 # ideally you would then run them from main guard
 # which means this file would be a module, that can be imported
+
+
 import matplotlib.pyplot as plt
 import numpy as np
 import random
 
+def dice_histogram(throws):
+    y = []
+    for n in range(throws):
+        y.append(random.randrange(6)+1)
+    # print(y)
+    plt.hist(y, bins = 6)
+    plt.show()
 
-y = []
-for n in range(100):
-    y.append(random.randrange(6)+1)
-# print(y)
-plt.hist(y, bins = 6)
-plt.show()
+
+print(dice_histogram(1000))
